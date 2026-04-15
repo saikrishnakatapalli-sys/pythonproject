@@ -14,7 +14,4 @@ The project follows modular programming and file handling.
 - Python
 - File Handling
 - Matplotlib
-# How to Run
-1. Clone the repository
-2. Run `main.py`
-3. Use menu options in console
+
