@@ -57,4 +57,3 @@ def display_graph_menu():
             break
         else:
             print("Invalid choice\n")
-display_graph_menu()
