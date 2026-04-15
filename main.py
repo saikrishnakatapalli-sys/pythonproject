@@ -3,6 +3,7 @@ from patient import *
 from doctor import *
 from appointment import *
 from billing import *
+from graphs import *
 
 # Create data files
 create_file("patients.txt")
@@ -16,7 +17,7 @@ doctors = load_list("doctors.txt")
 appointments = load_list("appointments.txt")
 bills = load_list("bills.txt")
 
-print("======HOSPITAL MANAGEMENT SYSTEM======")
+print("====== HOSPITAL MANAGEMENT SYSTEM ======")
 
 while True:
     print("""
@@ -32,24 +33,40 @@ while True:
 10. Discharge Patient
 11. Add Bill
 12. Display Bills
-13. Exit
+13. Graphs
+14. Exit
 """)
+
     choice = input("Enter choice: ")
 
-    if choice == "1": add_patient(patients)
-    elif choice == "2": display_patients(patients)
-    elif choice == "3": search_patient(patients)
-    elif choice == "4": update_patient(patients)
-    elif choice == "5": patients = delete_patient(patients)
-    elif choice == "6": add_doctor(doctors)
-    elif choice == "7": display_doctors(doctors)
-    elif choice == "8": add_appointment(appointments, patients, doctors)
-    elif choice == "9": display_appointments(appointments)
-    elif choice == "10": patients, appointments = discharge_patient(patients, appointments)
-    elif choice == "11": add_bill(bills)
-    elif choice == "12": display_bills(bills)
+    if choice == "1":
+        add_patient(patients)
+    elif choice == "2":
+        display_patients(patients)
+    elif choice == "3":
+        search_patient(patients)
+    elif choice == "4":
+        update_patient(patients)
+    elif choice == "5":
+        patients = delete_patient(patients)
+    elif choice == "6":
+        add_doctor(doctors)
+    elif choice == "7":
+        display_doctors(doctors)
+    elif choice == "8":
+        add_appointment(appointments, patients, doctors)
+    elif choice == "9":
+        display_appointments(appointments)
+    elif choice == "10":
+        patients, appointments = discharge_patient(patients, appointments)
+    elif choice == "11":
+        add_bill(bills)
+    elif choice == "12":
+        display_bills(bills)
     elif choice == "13":
-        print("====THE END====")
+        display_graph_menu()
+    elif choice == "14":
+        print("==== THE END ====")
         break
     else:
         print("Invalid choice\n")
