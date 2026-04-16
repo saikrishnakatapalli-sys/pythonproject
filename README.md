@@ -1,4 +1,4 @@
-# Hospital Management System Project
+## Hospital Management System Project
 # Author
 Katepalli Sai Krishna
 # Description
